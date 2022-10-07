@@ -26,3 +26,8 @@
 .comments {
   border: solid 2px purple;
 }
+
+#replies-container {
+  display: flex;
+  flex-direction: column;
+}
