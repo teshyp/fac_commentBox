@@ -1,0 +1,28 @@
+#comment-box-container {
+  border: solid 2px red;
+  display: grid;
+  grid-template-columns: 100px 2fr;
+  padding: 3rem;
+  max-width: 35rem;
+}
+
+#comment {
+  width: 20rem;
+  height: 7rem;
+}
+
+.input-boxes {
+  margin: 0 0 1.5rem 0;
+}
+
+#replies-container {
+  border: 2px blue solid;
+  display: flex;
+  flex-direction: column;
+  padding: 3rem;
+  max-width: 35rem;
+}
+
+.comments {
+  border: solid 2px purple;
+}

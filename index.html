@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>FAC Comment Box project</title>
+  </head>
+  <body>
+    <section id="comment-box-container">
+      <div id="comment-box-form">
+        <label for="fullName" name="fullName" class="label-boxes" required>
+          Full name
+        </label>
+        <input
+          type="text"
+          id="fullName"
+          name="fullName"
+          class="input-boxes"
+          minlength="1"
+          maxlength="30"
+        />
+
+        <label for="email" name="email" class="label-boxes" required>
+          Email address
+        </label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          class="input-boxes"
+          minlength="1"
+          maxlength="30"
+        />
+
+        <label for="comment" name="comment" class="label-boxes" required>
+          Comment
+        </label>
+        <input
+          type="text"
+          id="comment"
+          name="comment"
+          class="input-boxes"
+          minlength="1"
+          maxlength="140"
+        />
+        <p id="charCounter">140 character limit</p>
+        <input id="submitBtn" type="submit" value="Submit" />
+      </div>
+    </section>
+
+    <section id="replies-container">
+      <div>
+        <h2>Community comments</h2>
+      </div>
+      <div id="comment-chain" class="comments"></div>
+    </section>
+
+    <script type="text/javascript" src="app.js"></script>
+  </body>
+</html>
