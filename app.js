@@ -2,12 +2,11 @@ const formInput = document.getElementById("comment");
 const submitBtn = document.getElementById("submitBtn");
 const commentInput = document.getElementById("comment");
 const charCounter = document.getElementById("charCounter");
-const userName = document.getElementById("fullName");
+const userFirstName = document.getElementById("firstName");
+const userLastName = document.getElementById("lastName");
 const userEmail = document.getElementById("email");
 
 const parentRepliesDiv = document.querySelector("#comment-chain");
-
-console.log(typeof parentRepliesDiv);
 
 commentInput.addEventListener("keydown", keydowntest);
 
@@ -19,16 +18,45 @@ function keydowntest() {
 submitBtn.addEventListener("click", appendReplies);
 
 function appendReplies() {
-  console.log("appendReplies function working");
+  function userComment() {
+    const commentContainer = document
+      .createElement("div")
+      .classList.add("comment-userName");
+    commentContainer.classList.add("comment-container");
 
-  // 1. Create responseDiv
-  // 2. create h2 for name - append to responseDiv
-  //3. create p for response change - append to responseDiv
-  // 3.1 change innertext of h2 to fullName
-  // 3.2 change innertext of p to response
-  //4. Create span for date/time
-  //5. add option to delete
-  //4. append responseDiv to parent Node
+    const displayFullName = document.createElement("span");
+    displayFullName.innerText = formatDisplayName(
+      userFirstName.value,
+      userLastName.value
+    );
 
-  parentRepliesDiv.appendChild();
+    function formatDisplayName(firstName, lastName) {
+      const displayFirstName = tidyName(firstName);
+      const displaySecondName = tidyName(lastName);
+
+      function tidyName(name) {
+        const lowerCaseName = name.trim().toLowerCase().substring(0).slice(1);
+        const upperCaseFirstLetter = name[0].toUpperCase();
+        const tidiedName = upperCaseFirstLetter.concat(lowerCaseName);
+        return tidiedName;
+      }
+
+      return `${displayFirstName} ${displaySecondName}`;
+    }
+
+    const commentText = document
+      .createElement("p")
+      .classList.add("comment-text");
+    commentText.innerHTML = commentInput.value;
+
+    // check Comment Box criteria - need to use string methods, array and array methods - use on name and date, prevent default
+    // create template in css with class names
+    commentContainer.appendChild(displayFullName);
+
+    commentContainer.appendChild(commentText);
+
+    return commentContainer;
+  }
+
+  parentRepliesDiv.appendChild(userComment());
 }

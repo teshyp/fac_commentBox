@@ -12,11 +12,23 @@
     <section id="comment-box-container">
       <div id="comment-box-form">
         <label for="fullName" name="fullName" class="label-boxes" required>
-          Full name
+          First name
         </label>
         <input
           type="text"
-          id="fullName"
+          id="firstName"
+          name="fullName"
+          class="input-boxes"
+          minlength="1"
+          maxlength="30"
+        />
+
+        <label for="fullName" name="fullName" class="label-boxes" required>
+          Last name
+        </label>
+        <input
+          type="text"
+          id="lastName"
           name="fullName"
           class="input-boxes"
           minlength="1"
@@ -53,9 +65,19 @@
 
     <section id="replies-container">
       <div id="parent-replies-div">
-        <h2>Community comments</h2>
+        <h2>Community comments by most recent</h2>
       </div>
       <div id="comment-chain" class="comments"></div>
+
+      <div class="comment-container">
+        <span class="comment-userName"> firstName lastName </span>
+        <p class="comment-text">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti
+          reprehenderit esse eveniet dignissimos assumenda sit quisquam, vero
+          asperiores ullam, at iure tempore velit culpa eum commodi, iste eaque
+          sint? Nihil.
+        </p>
+      </div>
     </section>
 
     <script type="text/javascript" src="app.js"></script>
