@@ -19,16 +19,16 @@ function keydowntest() {
 submitBtn.addEventListener("click", appendReplies);
 
 function appendReplies() {
-  function createUserResponse() {
-    const displayUserName = document.createElement("h3");
-    displayUserName.innerText = userName.value;
-    return displayUserName;
-  }
-  // create h2 for name
-  // creae box comment
-  // append to replies container
+  console.log("appendReplies function working");
 
-  parentRepliesDiv.appendChild(createUserResponse());
+  // 1. Create responseDiv
+  // 2. create h2 for name - append to responseDiv
+  //3. create p for response change - append to responseDiv
+  // 3.1 change innertext of h2 to fullName
+  // 3.2 change innertext of p to response
+  //4. Create span for date/time
+  //5. add option to delete
+  //4. append responseDiv to parent Node
 
-  console.log("Working");
+  parentRepliesDiv.appendChild();
 }
