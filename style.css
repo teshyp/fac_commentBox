@@ -1,9 +1,31 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url("/images/31774.png");
+  background-size: cover;
+  color: white;
+  padding: 0rem 1rem 0 0rem;
+  font-family: "Andale Mono", sans-serif;
+  font-size: 0.9em;
+}
+
+#main-container {
+  display: flex;
+  border: solid red 2px;
+}
+
 #comment-box-container {
-  border: solid 2px red;
   display: grid;
   grid-template-columns: 100px 2fr;
   padding: 3rem;
-  max-width: 35rem;
+  min-width: 30rem;
+}
+
+#nav-logo {
+  width: 10rem;
+  height: 4rem;
 }
 
 #comment {
@@ -13,26 +35,74 @@
 
 .input-boxes {
   margin: 0 0 1.5rem 0;
+  width: 20rem;
+  border-radius: 8px;
+  height: 2rem;
+  padding: 0 1rem 0 1rem;
 }
 
 #replies-container {
-  border: 2px blue solid;
   display: flex;
   flex-direction: column;
   padding: 3rem;
   max-width: 35rem;
-}
-
-.comments {
-  border: solid 2px purple;
-}
-
-#replies-container {
-  display: flex;
-  flex-direction: column;
+  box-shadow: 0 15px 25px rgba(129, 124, 124, 0.2);
+  border-radius: 10px;
+  backdrop-filter: blur(14px);
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 20px;
+  text-align: center;
+  margin: 0 0 5rem 0;
 }
 
 .comment-container {
-  border: 2px blue solid;
-  padding: 1rem;
+  border: solid 1px rgb(118, 114, 114);
+  margin: 1rem;
+  box-shadow: 0 15px 25px rgba(129, 124, 124, 0.2);
+  border-radius: 15px;
+  backdrop-filter: blur(1px);
+  padding: 1.2rem 2rem 1.2rem 2rem;
+  border-radius: 1%;
+  word-wrap: break-word;
+}
+
+#comment {
+  display: flex;
+  flex-direction: column;
+  height: 6rem;
+  line-break: auto;
+}
+
+#charCounter {
+  margin: -0.5rem 0 1rem 0;
+  width: 30rem;
+}
+
+.input-boxes {
+  background-color: rgb(222, 234, 249);
+  border: solid 2px black;
+  margin: 1rem 0 1rem 0;
+}
+
+/* CSS */
+#submitBtn {
+  background-color: #fff000;
+  border-radius: 12px;
+  color: #000;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 0.5rem 0 0.5rem 0;
+  text-align: center;
+  transition: 200ms;
+  width: 100%;
+
+  border: 0;
+  font-size: 1rem;
+  user-select: none;
+}
+
+#submitBtn:not(:disabled):hover,
+#submitBtn:not(:disabled):focus {
+  background: #f4e603;
+  box-shadow: 0 0 0 2px rgba(247, 0, 0, 0.2), 0 3px 8px 0 rgba(245, 9, 9, 0.15);
 }

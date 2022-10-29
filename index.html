@@ -9,77 +9,87 @@
     <title>FAC Comment Box project</title>
   </head>
   <body>
-    <section id="comment-box-container">
-      <div id="comment-box-form">
-        <label for="fullName" name="fullName" class="label-boxes" required>
-          First name
-        </label>
-        <input
-          type="text"
-          id="firstName"
-          name="fullName"
-          class="input-boxes"
-          minlength="1"
-          maxlength="30"
-        />
-
-        <label for="fullName" name="fullName" class="label-boxes" required>
-          Last name
-        </label>
-        <input
-          type="text"
-          id="lastName"
-          name="fullName"
-          class="input-boxes"
-          minlength="1"
-          maxlength="30"
-        />
-
-        <label for="email" name="email" class="label-boxes" required>
-          Email address
-        </label>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          class="input-boxes"
-          minlength="1"
-          maxlength="30"
-        />
-
-        <label for="comment" name="comment" class="label-boxes" required>
-          Comment
-        </label>
-        <input
-          type="text"
-          id="comment"
-          name="comment"
-          class="input-boxes"
-          minlength="1"
-          maxlength="140"
-        />
-        <p id="charCounter">140 character limit</p>
-        <input id="submitBtn" type="submit" value="Submit" />
+    <nav>
+      <div>
+        <p>Frank Ocean: blond album listening party</p>
       </div>
-    </section>
+    </nav>
+    <div>
+      <section id="comment-box-container">
+        <div id="comment-box-form">
+          <label for="fullName" name="fullName" class="label-boxes" required>
+            First name
+          </label>
+          <input
+            type="text"
+            id="firstName"
+            name="fullName"
+            class="input-boxes"
+            minlength="1"
+            maxlength="30"
+          />
 
-    <section id="replies-container">
-      <div id="parent-replies-div">
-        <h2>Community comments by most recent</h2>
-      </div>
-      <div id="comment-chain" class="comments"></div>
+          <label for="fullName" name="fullName" class="label-boxes" required>
+            Last name
+          </label>
+          <input
+            type="text"
+            id="lastName"
+            name="fullName"
+            class="input-boxes"
+            minlength="1"
+            maxlength="30"
+          />
 
-      <div class="comment-container">
-        <span class="comment-userName"> firstName lastName </span>
-        <p class="comment-text">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti
-          reprehenderit esse eveniet dignissimos assumenda sit quisquam, vero
-          asperiores ullam, at iure tempore velit culpa eum commodi, iste eaque
-          sint? Nihil.
-        </p>
-      </div>
-    </section>
+          <label for="email" name="email" class="label-boxes" required>
+            Email
+          </label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            class="input-boxes"
+            minlength="1"
+            maxlength="30"
+          />
+
+          <label for="comment" name="comment" class="label-boxes" required>
+            Comment
+          </label>
+          <input
+            type="text"
+            id="comment"
+            name="comment"
+            class="input-boxes"
+            minlength="1"
+            maxlength="140"
+          />
+          <p id="charCounter">140 character limit</p>
+          <input id="submitBtn" type="submit" value="Submit" />
+        </div>
+      </section>
+
+      <section id="replies-container">
+        <div id="parent-replies-div">
+          <h2>Live chat</h2>
+        </div>
+        <div id="comment-chain" class="comments"></div>
+
+        <div class="comment-container">
+          <span class="comment-userName">
+            Placeholder: firstName lastName
+          </span>
+          <p class="comment-text">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti
+            reprehenderit esse eveniet dignissimos assumenda sit quisquam, vero
+            asperiores ullam, at iure tempore velit culpa eum commodi, iste
+            eaque sint? Nihil.
+          </p>
+        </div>
+      </section>
+    </div>
 
     <script type="text/javascript" src="app.js"></script>
+    <link rel="stylesheet" href="style.css" />
   </body>
 </html>
