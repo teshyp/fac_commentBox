@@ -3,7 +3,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: url("/images/31774.png");
+  background-image: url("https://github.com/teshyp/fac_commentBox/blob/main/images/31774.png");
   background-size: cover;
   color: white;
   padding: 0rem 1rem 0 0rem;
@@ -31,6 +31,8 @@ body {
 #comment {
   width: 20rem;
   height: 7rem;
+  word-wrap: break-word;
+  word-break: break-all;
 }
 
 .input-boxes {
@@ -39,6 +41,7 @@ body {
   border-radius: 8px;
   height: 2rem;
   padding: 0 1rem 0 1rem;
+  box-sizing: border-box;
 }
 
 #replies-container {
@@ -70,7 +73,6 @@ body {
   display: flex;
   flex-direction: column;
   height: 6rem;
-  line-break: auto;
 }
 
 #charCounter {
